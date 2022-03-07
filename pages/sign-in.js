@@ -33,7 +33,7 @@ export default function SignIn() {
                 <h1>
                     Sign In
                 </h1>
-                <input
+                <input className='border-black'
                     onChange={e => setEmail(e.target.value)}
                     style={{margin: 10}}
                 />
