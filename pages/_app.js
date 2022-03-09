@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { supabase } from '../client'
 import { useRouter } from 'next/router'
+import Navbar from '../components/Navbar'
 
 function MyApp({ Component, pageProps }) {
   const [authenticatedState, setAuthenticatedState] = useState('not-authenticated')
@@ -42,20 +43,32 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div>
+      <Navbar></Navbar>
+      <Component {...pageProps} />
+    </div>
+    
+    /*<div className='bg-newspaper space-x-4'>
       <nav>
         <Link href='/'>
-          <a>Home</a>
+          <a className='text-2xl font-pt text-bold px-20'>Home</a>
         </Link>
         {
           authenticatedState === 'not-authenticated' && (
             <Link href='/sign-in'>
-              <a>Sign In</a>
+              <a className='text-3xl font-bold'>Sign In</a>
             </Link>
           )
         }
+        <Link href='/'>
+          <a className='text-2xl font-pt text-bold px-20'>Test</a>
+        </Link>
+        <Link href='/'>
+          <a className='text-2xl font-pt text-bold px-20'>Test</a>
+        </Link>
       </nav>
       <Component {...pageProps} />
-    </div>)
+    </div>*/
+    )
 }
 
 export default MyApp
