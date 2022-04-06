@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 import { supabase } from '../client'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
@@ -22,7 +21,7 @@ export default function Home() {
     <div>
       <main>
         <h1 className="text-3xl font-bold">Test Succesful</h1>
-        <h2 className="text-3xl">Go do work dipshit</h2>
+        <h2 className="text-3xl"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
       </main>
     </div>
   )
